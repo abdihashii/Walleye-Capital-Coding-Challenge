@@ -19,7 +19,8 @@
 
 - [x] Utilize TypeScript and NextJS.
   - I'm only using TypeScript in this project and I'm also using Next14 to build it
-- [ ] Restrict total development time to 2-3 hours.
+- [x] Restrict total development time to 2-3 hours.
+  - As of right now, I have about 35 minutes left. The only that is missing is the unit and integration testing. I will try to complete this within the 3 hour time frame!
 
 ### 3. Design
 
