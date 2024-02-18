@@ -12,6 +12,13 @@ const RecipeCard = ({ recipe }: { recipe: TRecipe }) => {
 					<li key={index}>{ingredient}</li>
 				))}
 			</ul>
+
+			<h3 className="text-lg font-bold">Instructions</h3>
+			<ol className="list-inside list-decimal">
+				{recipe.instructions.map((instruction, index) => (
+					<li key={index}>{instruction}</li>
+				))}
+			</ol>
 		</div>
 	);
 };
