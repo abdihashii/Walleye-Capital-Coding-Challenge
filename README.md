@@ -20,3 +20,21 @@
 - [x] Utilize TypeScript and NextJS.
   - I'm only using TypeScript in this project and I'm also using Next14 to build it
 - [ ] Restrict total development time to 2-3 hours.
+
+### 3. Design
+
+- [ ] Design a clean and user-friendly UI.
+- [x] Implement Shadcn/ui components for UI development.
+  - I'm using shadcn/ui as my only UI library, also using lucide-react for icons
+
+### 4. Data Fetching
+
+- [ ] Bonus 1: Use TanStack query for efficient data fetching from a server or API.
+
+### 5. Integration
+
+- [ ] Bonus 2: Integrate OpenAI API to provide additional features like ideas for recipe modifications or other suggestions.
+
+### 6. Testing
+
+- [ ] Bonus 3: Include tests (unit, integration, and/or end-to-end) for main functionalities.
