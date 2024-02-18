@@ -7,6 +7,7 @@ import { mockRecipeData } from '@/server/db';
 import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import RecipeCard from '@/components/Recipe/RecipeCard';
 
 const SubmitButton = () => {
 	const { pending } = useFormStatus();
@@ -49,12 +50,10 @@ export default function Home() {
 				{state.success ? (
 					<article className="grid w-full grid-cols-3 gap-4">
 						{state.recipes.map((recipe) => (
-							<div
+							<RecipeCard
 								key={recipe.id}
-								className="rounded-xl border border-black p-4"
-							>
-								<h2 className="text-2xl font-bold">{recipe.title}</h2>
-							</div>
+								recipe={recipe}
+							/>
 						))}
 					</article>
 				) : (
