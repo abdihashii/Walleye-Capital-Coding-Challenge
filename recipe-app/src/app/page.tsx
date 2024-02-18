@@ -8,6 +8,9 @@ import SearchForm from '@/components/Search/SearchForm';
 import SearchResults from '@/components/Search/SearchResults';
 
 export default function Home() {
+	// I'm keeping this a client component because I want to share the form state
+	// and action variables with two separate child components
+	// (SearchForm and SearchResults)
 	const [state, formAction] = useFormState(searchRecipesAction, {
 		title: '',
 		recipes: mockRecipeData, // The initial state is all recipes
