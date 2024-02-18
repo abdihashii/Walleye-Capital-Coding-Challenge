@@ -2,6 +2,7 @@ import { getRecipeFromId } from '@/lib/utils';
 import React from 'react';
 
 import RecipeCard from '@/components/Recipe/RecipeCard';
+import AIEnhacement from '@/components/Recipe/AIEnhacement';
 
 export default async function RecipePage({
 	params,
@@ -25,11 +26,19 @@ export default async function RecipePage({
 	}
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center p-24">
+		<main className="flex min-h-screen flex-col items-center justify-center gap-10 p-24">
 			<RecipeCard
 				recipe={recipe}
 				isPage={true}
 			/>
+
+			<section>
+				<h2 className="text-2xl font-semibold capitalize">
+					Use AI to enhance this recipe!
+				</h2>
+
+				<AIEnhacement title={recipe.title} />
+			</section>
 		</main>
 	);
 }
