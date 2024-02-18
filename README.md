@@ -14,3 +14,9 @@
 - [x] Each recipe should include a title, ingredients list, and cooking instructions
 - [x] Allow users to view detailed information by clicking on the recipe title
   - User can now click the recipe from the home page and go to a "recipe" page
+
+### 2. Technology
+
+- [x] Utilize TypeScript and NextJS.
+  - I'm only using TypeScript in this project and I'm also using Next14 to build it
+- [ ] Restrict total development time to 2-3 hours.
