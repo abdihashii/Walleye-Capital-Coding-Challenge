@@ -5,6 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { Button } from '../ui/button';
 import { Loader2 } from 'lucide-react';
+import { Skeleton } from '../ui/skeleton';
 
 const AIEnhacement = ({ title }: { title: string }) => {
 	// A state to make sure we only fetch the history on button click
@@ -37,6 +38,7 @@ const AIEnhacement = ({ title }: { title: string }) => {
 	} = useQuery({
 		queryKey: ['history', title], // Including the title because there are a lot of recipes
 		queryFn: fetchHistory,
+		gcTime: 1000 * 60 * 60 * 24, // Cache the data for 24 hours
 		enabled: fetchEnabled,
 	});
 
@@ -62,7 +64,17 @@ const AIEnhacement = ({ title }: { title: string }) => {
 				{isLoading ? <Loader2 className="animate-spin" /> : 'Get History'}
 			</Button>
 
-			{history && <p>{history.data}</p>}
+			{history ? (
+				<p className="text-center">{history.data}</p>
+			) : (
+				isLoading && (
+					<div className="w-full space-y-2">
+						<Skeleton className="h-4 w-full" />
+						<Skeleton className="h-4 w-full" />
+						<Skeleton className="h-4 w-full" />
+					</div>
+				)
+			)}
 		</div>
 	);
 };
