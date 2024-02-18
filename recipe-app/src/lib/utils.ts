@@ -7,6 +7,13 @@ export function cn(...inputs: ClassValue[]) {
 	return twMerge(clsx(inputs));
 }
 
+/**
+ * This function searches the recipe database for a recipe with the given title.
+ * @param title - The title of the recipe to search for in the database
+ * @returns - A promise that resolves when the search is complete with the
+ *            title and an array of recipes that match the title. The
+ *            promise will reject if there is an error.
+ */
 export function getRecipesFromTitle(title: string): Promise<{
 	error?: string;
 	title?: string;
