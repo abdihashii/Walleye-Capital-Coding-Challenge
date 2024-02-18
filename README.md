@@ -42,4 +42,5 @@
 
 ### 6. Testing
 
-- [ ] Bonus 3: Include tests (unit, integration, and/or end-to-end) for main functionalities.
+- [x] Bonus 3: Include tests (unit, integration, and/or end-to-end) for main functionalities.
+  - Yes there is a basic Playwright test that runs headless in the ./test dir
