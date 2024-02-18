@@ -12,7 +12,7 @@ const RecipeCard = ({
 }) => {
 	return (
 		<div className="flex flex-col gap-8 rounded-xl border border-black p-4">
-			<div className="flex flex-row items-center gap-4">
+			<div className="flex flex-row items-start gap-4">
 				{isPage && (
 					<Link
 						href="/"
