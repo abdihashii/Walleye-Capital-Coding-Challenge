@@ -12,4 +12,5 @@
 - [x] Include as much details about the recipe as appropriate
   - For now, each recipe shows the title, ingredients, and instructions
 - [x] Each recipe should include a title, ingredients list, and cooking instructions
-- [ ] Allow users to view detailed information by clicking on the recipe title
+- [x] Allow users to view detailed information by clicking on the recipe title
+  - User can now click the recipe from the home page and go to a "recipe" page
