@@ -2,7 +2,7 @@
 
 ## Objective
 
-1. Functionality
+### 1. Functionality
 
 - [ ] Enable users to search for recipes by entering their titles
 - [ ] Display a list of recipes that match the search criteria
