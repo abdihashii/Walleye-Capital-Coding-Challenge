@@ -1,26 +1,11 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
+import { useFormState } from 'react-dom';
 import { searchRecipesAction } from '@/server/actions';
 import { mockRecipeData } from '@/server/db';
 
-import { Loader2 } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import RecipeCard from '@/components/Recipe/RecipeCard';
-
-const SubmitButton = () => {
-	const { pending } = useFormStatus();
-
-	return (
-		<Button
-			className="h-12 w-32"
-			type="submit"
-		>
-			{pending ? <Loader2 className="animate-spin" /> : 'Search'}
-		</Button>
-	);
-};
+import SearchForm from '@/components/Search/SearchForm';
 
 export default function Home() {
 	const [state, formAction] = useFormState(searchRecipesAction, {
@@ -32,20 +17,7 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col items-center justify-between p-24">
 			<section className="flex w-full flex-col items-center gap-8 rounded-xl border border-black p-5">
-				<form
-					action={formAction}
-					className="flex w-3/4 flex-row gap-2"
-				>
-					<Input
-						className="h-12"
-						placeholder="Search for recipes..."
-						type="search"
-						name="title"
-						autoFocus={true}
-					/>
-
-					<SubmitButton />
-				</form>
+				<SearchForm formAction={formAction} />
 
 				{state.success ? (
 					<article className="grid w-full grid-cols-3 gap-4">
