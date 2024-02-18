@@ -36,7 +36,7 @@ const AIEnhacement = ({ title }: { title: string }) => {
 	};
 
 	return (
-		<div>
+		<div className="flex w-full flex-col items-center gap-4">
 			<Button
 				className="w-32"
 				onClick={fetchHistory}

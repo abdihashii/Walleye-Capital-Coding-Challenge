@@ -32,9 +32,9 @@ export default async function RecipePage({
 				isPage={true}
 			/>
 
-			<section>
+			<section className="flex w-full flex-col items-center gap-8 rounded-xl border-2 border-blue-700 p-6">
 				<h2 className="text-2xl font-semibold capitalize">
-					Use AI to enhance this recipe!
+					Use AI to get the history of: &quot;{recipe.title}&quot;
 				</h2>
 
 				<AIEnhacement title={recipe.title} />
