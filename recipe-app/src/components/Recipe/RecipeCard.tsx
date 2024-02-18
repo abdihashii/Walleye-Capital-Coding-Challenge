@@ -27,6 +27,7 @@ const RecipeCard = ({
 					<Link
 						href={`/recipe/${recipe.id}`}
 						className="text-blue-600 transition-all duration-300 hover:text-blue-800 hover:underline"
+						data-testid="recipe-link"
 					>
 						{recipe.title}
 					</Link>

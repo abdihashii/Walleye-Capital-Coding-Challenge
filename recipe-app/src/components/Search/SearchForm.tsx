@@ -35,6 +35,7 @@ const SearchForm = ({
 				type="search"
 				name="title"
 				autoFocus={true}
+				data-testid="search-input"
 			/>
 
 			<SubmitButton />
