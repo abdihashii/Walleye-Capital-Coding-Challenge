@@ -23,17 +23,21 @@
 
 ### 3. Design
 
-- [ ] Design a clean and user-friendly UI.
+- [x] Design a clean and user-friendly UI.
+  - I personally think it's pretty good. It optimizes both function and form.
 - [x] Implement Shadcn/ui components for UI development.
   - I'm using shadcn/ui as my only UI library, also using lucide-react for icons
 
 ### 4. Data Fetching
 
-- [ ] Bonus 1: Use TanStack query for efficient data fetching from a server or API.
+- [x] Bonus 1: Use TanStack query for efficient data fetching from a server or API.
+  - I'm not using react query in the search field, but I am using it in the recipe page to retrieve API data from my server that basically calls OpenAI to get the history of the current recipe!
+  - Users will also have the history results cached so that we don't use up API resources
 
 ### 5. Integration
 
-- [ ] Bonus 2: Integrate OpenAI API to provide additional features like ideas for recipe modifications or other suggestions.
+- [x] Bonus 2: Integrate OpenAI API to provide additional features like ideas for recipe modifications or other suggestions.
+  - I'm using OpenAI's gpt-4 chat model to get the history of the recipe the user is currently looking at.
 
 ### 6. Testing
 
