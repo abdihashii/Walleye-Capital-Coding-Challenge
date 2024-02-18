@@ -4,8 +4,8 @@ import { useFormState } from 'react-dom';
 import { searchRecipesAction } from '@/server/actions';
 import { mockRecipeData } from '@/server/db';
 
-import RecipeCard from '@/components/Recipe/RecipeCard';
 import SearchForm from '@/components/Search/SearchForm';
+import SearchResults from '@/components/Search/SearchResults';
 
 export default function Home() {
 	const [state, formAction] = useFormState(searchRecipesAction, {
@@ -20,14 +20,7 @@ export default function Home() {
 				<SearchForm formAction={formAction} />
 
 				{state.success ? (
-					<article className="grid w-full grid-cols-3 gap-4">
-						{state.recipes.map((recipe) => (
-							<RecipeCard
-								key={recipe.id}
-								recipe={recipe}
-							/>
-						))}
-					</article>
+					<SearchResults state={state} />
 				) : (
 					<p className="text-red-500">
 						No recipes found with the title: {state.title}. Please try again.
