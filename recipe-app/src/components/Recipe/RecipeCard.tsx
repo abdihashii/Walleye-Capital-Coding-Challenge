@@ -1,10 +1,18 @@
 import { TRecipe } from '@/types';
+import Link from 'next/link';
 import React from 'react';
 
 const RecipeCard = ({ recipe }: { recipe: TRecipe }) => {
 	return (
 		<div className="flex flex-col gap-8 rounded-xl border border-black p-4">
-			<h2 className="line-clamp-3 h-28 text-2xl font-bold">{recipe.title}</h2>
+			<h2 className="line-clamp-3 h-28 text-2xl font-bold">
+				<Link
+					href={`/recipe/${recipe.id}`}
+					className="text-blue-600 transition-all duration-300 hover:text-blue-800 hover:underline"
+				>
+					{recipe.title}
+				</Link>
+			</h2>
 
 			<div>
 				<h3 className="text-lg font-bold">Ingredients</h3>
