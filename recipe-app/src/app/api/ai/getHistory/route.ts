@@ -33,7 +33,7 @@ export async function POST(req: Request) {
 				data: 'No data found',
 			},
 			{
-				status: 404,
+				status: 500,
 			},
 		);
 	}
