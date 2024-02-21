@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
+import { useFormStatus } from 'react-dom';
+
+import { Loader2 } from 'lucide-react';
 import { Input } from '../ui/input';
 import { Button } from '../ui/button';
-import { Loader2 } from 'lucide-react';
-import { useFormStatus } from 'react-dom';
 
 const SubmitButton = () => {
 	const { pending } = useFormStatus();

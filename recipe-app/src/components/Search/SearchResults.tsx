@@ -1,13 +1,14 @@
 import React from 'react';
-import RecipeCard from '../Recipe/RecipeCard';
 import { TRecipe } from '@/types';
+
+import RecipeCard from '../Recipe/RecipeCard';
 
 const SearchResults = ({
 	state,
 }: {
 	state: {
 		title: string;
-		recipes: TRecipe[];
+		recipes: Array<TRecipe>;
 		success: boolean;
 	};
 }) => {
