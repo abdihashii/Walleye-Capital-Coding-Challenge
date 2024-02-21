@@ -8,10 +8,12 @@ import { mockRecipeData } from './db';
 
 /**
  * This function is called when the search form is submitted. It searches the
- * recipe database for a recipe with the given title with the help of the
+ * recipe database for a recipe with the given title using the
  * `getRecipesFromTitle` function. If no title is provided, it returns all
  * recipes. It then returns the title and an array of recipes that match the
- * title. The promise will reject if there is an error.
+ * title.
+ * If there is an error, it returns an empty array of recipes and a success
+ * value of false.
  * @param prevState - The previous state of the form
  * @param formData - The form data from the form submission
  * @returns - A promise that resolves with the new state of the form after
@@ -31,10 +33,11 @@ export const searchRecipesAction = async (
 }> => {
 	const inputTitle = formData.get('title') as string;
 
+	// If no title is provided, return all recipes
 	if (!inputTitle) {
 		return {
 			title: '',
-			recipes: mockRecipeData, // Return all recipes if no title is provided
+			recipes: mockRecipeData,
 			success: true, // Return success if no title is provided because we are returning all recipes
 		};
 	}
