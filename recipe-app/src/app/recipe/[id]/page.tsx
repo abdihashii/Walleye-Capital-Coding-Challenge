@@ -17,28 +17,26 @@ export default async function RecipePage({
 
 	if (error || !recipe) {
 		return (
-			<main className="flex min-h-screen flex-col items-center justify-center p-24">
-				<section className="w-full flex-col items-center rounded-xl border border-black p-5">
-					<h1>{error}</h1>
-				</section>
-			</main>
+			<section className="w-full flex-col items-center rounded-xl border border-black p-5">
+				<h1>{error}</h1>
+			</section>
 		);
 	}
 
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-center gap-10 p-24">
+		<>
 			<RecipeCard
 				recipe={recipe}
 				isPage={true}
 			/>
 
-			<section className="flex w-full flex-col items-center gap-8 rounded-xl border-2 border-blue-700 p-6">
+			<section className="flex w-1/2 flex-col items-center gap-8 rounded-xl border-2 border-black p-6">
 				<h2 className="text-2xl font-semibold capitalize">
 					Use AI to get the history of: &quot;{recipe.title}&quot;
 				</h2>
 
 				<AIEnhacement title={recipe.title} />
 			</section>
-		</main>
+		</>
 	);
 }
