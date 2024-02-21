@@ -6,10 +6,8 @@ export default function RecipeLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
-			<body>
-				<AppQueryProvider>{children}</AppQueryProvider>
-			</body>
-		</html>
+		<main className="flex min-h-screen flex-col items-center justify-center gap-10 p-24">
+			<AppQueryProvider>{children}</AppQueryProvider>
+		</main>
 	);
 }
